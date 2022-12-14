@@ -1,0 +1,31 @@
+services:
+  server:
+    container_name: 'server'
+    network_mode: 'host'
+    build:
+      context: 'Server'
+      dockerfile: 'Dockerfile'
+    environment:
+      - 'quantityWorkersEnv=2'
+    ports:
+      - '9080:9080/udp'
+
+  database:
+    container_name: 'database'
+    network_mode: 'bridge'
+    build:
+      context: './Database'
+      dockerfile: 'Dockerfile'
+    ports:
+      - '9080:9080/tcp'
+
+  worker:
+    depends_on:
+      - 'server'
+      - 'database'
+    network_mode: 'host'
+    build:
+      context: 'Worker'
+      dockerfile: 'Dockerfile'
+    deploy:
+      replicas: 2

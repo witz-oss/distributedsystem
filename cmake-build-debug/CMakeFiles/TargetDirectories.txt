@@ -1,0 +1,3 @@
+/Users/rostyslavlugovyy/CLionProjects/group_e_10/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/rostyslavlugovyy/CLionProjects/group_e_10/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/rostyslavlugovyy/CLionProjects/group_e_10/cmake-build-debug/CMakeFiles/DistributedSystem.dir
